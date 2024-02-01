@@ -19,7 +19,7 @@ logger.addHandler(logger_file_handler)
 
 # Fetch the API key from the environment variable
 API_KEY = os.getenv('OPENWEATHERMAP_API_KEY')
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+SOME_SECRET = os.getenv('SOME_SECRET')
 
 # Ensure the API key is available
 if API_KEY is None:
