@@ -25,13 +25,13 @@ SOME_SECRET = os.getenv('SOME_SECRET')
 if API_KEY is None:
     logger.error("API key not found. Make sure it's set as an environment variable.")
     raise ValueError("API key not found. Make sure it's set as an environment variable.")
-if GITHUB_TOKEN is None:
+if SOME_SECRET is None:
     logger.error("GitHub token not found. Make sure it's set as an environment variable.")
     raise ValueError("GitHub token not found. Make sure it's set as an environment variable.")
 
 # API endpoint for weather data
 API_URL = f'https://api.openweathermap.org/data/2.5/weather?q=Haridwar&appid={API_KEY}&units=metric'
-GITHUB_REPO_URL = 'https://api.github.com/repos/your_username/your_repo/contents/status.log'
+GITHUB_REPO_URL = 'https://api.github.com/repos/MaheshSharan/Weather_Logs/status.log'
 
 def upload_log_to_github(file_path, github_token, repo_url):
     with open(file_path, 'rb') as file:
